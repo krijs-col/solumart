@@ -4,9 +4,9 @@ import { View, TextInput, ScrollView, Button, StyleSheet } from 'react-native';
 const CreateUserScreen = () => {
 
     const [state, setstate] = useState({
-        Nombre: '',
-        Email: '',
-        Telefono: ''
+        name: '',
+        email: '',
+        phone: ''
     })
 
     return (
