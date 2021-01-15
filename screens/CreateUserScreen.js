@@ -9,19 +9,28 @@ const CreateUserScreen = () => {
         phone: ''
     })
 
+    const handleChangeText = (name, value) => {
+        setstate({...state,[name]: value})
+    }
+
     return (
         <ScrollView style={styles.container}>
             <View style={styles.inputGroup}>
-                <TextInput placeholder="Nombre"/>
+                <TextInput placeholder="Nombre" 
+                onChangeText={(value)=> handleChangeText('name',value)}/>
             </View>
             <View style={styles.inputGroup}>
-                <TextInput placeholder="Email"/>
+                <TextInput placeholder="Email"
+                onChangeText={(value)=> handleChangeText('email1',value)}
+                />
             </View>
             <View style={styles.inputGroup}>
-                <TextInput placeholder="Teléfono"/>
+                <TextInput placeholder="Teléfono"
+                onChangeText={(value)=> handleChangeText('phone',value)}
+                />
             </View>
             <View style={styles.inputGroup}>
-                <Button title="Guardar"></Button>
+                <Button title="Guardar" onPress={() => console.log(state)}></Button>
             </View>
         </ScrollView>
     )
